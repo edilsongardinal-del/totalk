@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block content %}
+<header>
+    <h1>Dashboard</h1>
+    <p>Visão geral do desempenho do agente e métricas de teste</p>
+</header>
+<div class="grid-container">
+    <div class="card">
+        <h3>Total de Conversas</h3>
+        <p class="metric" id="total-convos">0</p>
+    </div>
+    <div class="card">
+        <h3>Taxa de Sucesso</h3>
+        <p class="metric" id="success-rate">0%</p>
+    </div>
+    <div class="card">
+        <h3>Duração Média</h3>
+        <p class="metric">N/A</p>
+    </div>
+    <div class="card">
+        <h3>Taxa de Fallback IA</h3>
+        <p class="metric">N/A</p>
+    </div>
+    <div class="card large">
+        <h3>Tendências de Performance</h3>
+        <canvas id="performance-chart"></canvas>
+    </div>
+    <div class="card">
+        <h3>Sucesso na Coleta de Variáveis</h3>
+        <ul class="variable-list">
+            <li><span>Nome</span><span id="var-nome">0%</span></li>
+            <li><span>Email</span><span id="var-email">0%</span></li>
+            <li><span>Seguro</span><span id="var-seguro">0%</span></li>
+            <li><span>Horário</span><span id="var-horario">0%</span></li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

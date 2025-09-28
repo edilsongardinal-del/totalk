@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livia Agent - Plataforma de Testes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>L</h1>
+                <div>
+                    <h2>Livia Agent</h2>
+                    <p>Plataforma de Testes</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Dashboard</a></li>
+                    <li><a href="/simulator">Simulador de Cliente</a></li>
+                    <li><a href="/success-analysis">Análise de Sucesso</a></li>
+                    <li><a href="/rules-vs-ai">Regras vs IA</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <p><strong>Status do Agente:</strong> Online</p>
+                <p id="last-update">Última atualização: agora</p>
+            </div>
+        </aside>
+        <main class="main-content">
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

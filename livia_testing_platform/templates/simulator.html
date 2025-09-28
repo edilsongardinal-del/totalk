@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block content %}
+<header>
+    <h1>Simulador de Cliente</h1>
+    <p>Teste o desempenho do agente com diferentes personalidades de cliente</p>
+</header>
+<div class="simulator-grid">
+    <div class="card">
+        <h3>Configurações da Simulação</h3>
+        <form id="simulation-form">
+            <label for="personality">Personalidade do Cliente</label>
+            <select id="personality" name="personality">
+                <option value="cooperativo">Cooperativo</option>
+                <option value="resistente">Resistente</option>
+                <option value="ocupado">Ocupado</option>
+                <option value="confuso">Confuso</option>
+                <option value="desconfiado">Desconfiado</option>
+                <option value="interessado">Interessado</option>
+            </select>
+            <button type="submit">Iniciar Simulação</button>
+            <div id="loading-spinner" class="spinner" style="display: none;"></div>
+        </form>
+    </div>
+    <div class="card">
+        <h3>Conversa ao Vivo</h3>
+        <div id="conversation-log">
+            <p class="placeholder">Nenhuma mensagem ainda...</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

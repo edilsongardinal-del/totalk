@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+<header>
+    <h1>Análise de Sucesso</h1>
+    <p>Análise detalhada das taxas de sucesso na coleta de variáveis</p>
+</header>
+<div class="grid-container">
+    <div class="card large">
+        <h3>Matriz de Coleta de Variáveis</h3>
+        <table id="collection-matrix">
+            <thead>
+                <tr>
+                    <th>Personalidade</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Seguro</th>
+                    <th>Horario</th>
+                </tr>
+            </thead>
+            <tbody>
+                </tbody>
+        </table>
+    </div>
+    <div class="card">
+        <h3>Motivos Comuns de Falha</h3>
+        <ul class="failure-list" id="failure-reasons-list">
+             </ul>
+    </div>
+</div>
+{% endblock %}
